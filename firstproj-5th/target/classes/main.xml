@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="hotel" class="com.ayush.springmvcboot.Hotel">
+	<property name="name" value="hotel1"></property>
+	<property name="Menu" ref="menu"></property>
+</bean>
+
+<bean id="m1" name="menu" class="com.ayush.springmvcboot.menu">
+<property name="dishes">
+<map>
+<entry key="Veg-Pizza" value="100"/>
+<entry key="Veg-Burger" value="120"/>
+<entry key="Chicken-Pizza" value="170"/>
+<entry key="Chicken-Burger" value="200"/>
+</map>
+</property>
+</bean>
+
+<!-- <bean name="usrlst" class="com.ayush.springmvcboot.UserService">
+<property name="users">
+<list>
+<value>
+
+</value>
+<value>user2</value>
+<value>user3</value>
+</list>
+</property>
+</bean>-->
+
+<bean name="userdef" class="com.ayush.springmvcboot.User">
+<property name="usrdb">
+<map>
+<entry key="Anand@gmail.com" value="Anand@123"/>
+<entry key="Joshi@gmail.com" value="Joshi@123"/>
+<entry key="admin@gmail.com" value="admin@123"/>
+</map>
+</property>
+</bean>
+<!-- 
+
+<property name="name" value="Anand"></property>
+<property name="password" value="Anand@123"></property>
+<property name="email" value="Anand@gmail.com"></property>
+</bean>
+<bean id="user2" class="com.ayush.springmvcboot.User">
+<property name="name" value="Joshi"></property>
+<property name="password" value="Joshi@123"></property>
+<property name="email" value="Joshi@gmail.com"></property>
+</bean>
+<bean id="user3" class="com.ayush.springmvcboot.User">
+<property name="name" value="hamant"></property>
+<property name="password" value="hamant@123"></property>
+<property name="email" value="hamant@gmail.com"></property>
+</bean> -->
+
+
+</beans>
